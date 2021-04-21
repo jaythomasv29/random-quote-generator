@@ -53,9 +53,13 @@ function getRandomQuote() {
 
 /***
  * `printQuote` function
+ * 1) querySelects quote box
+ * 2) get random quote Object element from quotes array
+ * 3) begin htmlString for concatenation
+ * 4) check for conditions to see which object properties exist
  ***/
 function printQuote() {
-  const quoteBox = document.querySelector("#quote-box");
+  const htmlString = document.querySelector("#quote-box");
   const randomQuote = getRandomQuote(); // stores random quote as variable
   let newQuote = "";
 
@@ -73,7 +77,7 @@ function printQuote() {
     newQuote += `<span class="year">${randomQuote.year}</span>`;
   }
   newQuote += "</p>";
-  quoteBox.innerHTML = newQuote;
+  htmlString.innerHTML = newQuote;
 }
 
 /***
