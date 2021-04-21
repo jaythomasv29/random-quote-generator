@@ -17,30 +17,35 @@ project 1 - A Random Quote Generator
     source: "Walt Disney",
     citation: "Facebook",
     year: "1991",
+    tags: '#followyourdreams',
   },
   {
     quote: "The secret of getting ahead is getting started.",
     source: "Mark Twain",
     citation: "Twitter",
     year: "1984",
+    tags: '#motivational',
   },
   {
     quote: "I wake up every morning and think to myself, ‘how far can I push this company in the next 24 hours.’",
     source: "Leah Busque",
     citation: "",
     year: "1946",
+    tags: '#lifehack',
   },
   {
     quote: "Whatever you are, be a good one.",
     source: "Abraham Lincoln",
     citation: "",
     year: "",
+    tags: '#motivational',
   },
   {
     quote: "Fairy tales are more than true: not because they tell us that dragons exist, but because they tell us that dragons can be beaten.",
     source: "Neil Gaiman",
     citation: "",
     year: '',
+    tags: '#dreamer',
   }
 ];
 /***
@@ -77,13 +82,26 @@ function printQuote() {
   if (randomQuote.year) {
     newQuote += `<span class="year">${randomQuote.year}</span>`;
   }
+  newQuote += `, <span class="tag">${randomQuote.tags}</span>`;
   newQuote += "</p>";
   htmlString.innerHTML = newQuote;
+  changeBackground()
 }
 
+
+function changeBackground() {
+  // access body 
+  // change background color of body using .css
+  let red =  Math.floor(Math.random() * 256)
+  let green =  Math.floor(Math.random() * 256)
+  let blue =  Math.floor(Math.random() * 256)
+document.querySelector('body').style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
+}
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
  ***/
+
+setInterval(printQuote, 3000)
 
 document.getElementById("load-quote").addEventListener("click", printQuote, false);
