@@ -45,6 +45,7 @@ project 1 - A Random Quote Generator
 ];
 /***
  * `getRandomQuote` function
+ * access quotes array to return a element that is randomized from the number 0 and the array length. The greater number is NOT inclusive
  ***/
 
 function getRandomQuote() {
