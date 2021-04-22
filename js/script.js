@@ -1,6 +1,7 @@
 /******************************************
 Treehouse FSJS Techdegree: James Vongampai
 project 1 - A Random Quote Generator
+page viewable at: https://jaythomasv29.github.io/random-quote-generator/
 ******************************************/
 
 // For assistance:
