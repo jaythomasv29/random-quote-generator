@@ -84,6 +84,7 @@ function printQuote() {
   }
   newQuote += `, <span class="tag">${randomQuote.tags}</span>`;
   newQuote += "</p>";
+  // document.getElementById('quote-box').innerHTML = yourStringHere; 
   htmlString.innerHTML = newQuote;
   changeBackground()
 }
